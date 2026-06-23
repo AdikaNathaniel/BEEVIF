@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1B3A6B;
+  --coral: #E8652A;
+  --navy-dark: #122848;
+  --coral-dark: #c94f18;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --muted: #f5f7fa;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav, button, .font-sans {
+  font-family: Arial, Helvetica, sans-serif;
+}

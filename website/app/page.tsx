@@ -1,7 +1,6 @@
 import Link from "next/link";
-
-const HERO_BG = "/images/Background-1.jpeg";
-const SECTION_IMG_1 = "/images/Background-2.jpeg";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import MissionSection from "@/components/MissionSection";
 const SECTION_IMG_2 = "/images/Our-Work.jpg";
 
 const pillars = [
@@ -33,16 +32,9 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative min-h-[92vh] flex items-center justify-center text-center px-4"
-        style={{
-          backgroundImage: `url('${HERO_BG}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <HeroSlideshow>
         <div
-          className="relative z-10 max-w-4xl mx-auto rounded-2xl px-8 py-14"
+          className="max-w-4xl mx-auto rounded-2xl px-8 py-14"
           style={{ backgroundColor: "rgba(27,58,107,0.55)" }}
         >
           <p className="uppercase tracking-widest text-sm mb-4 font-sans" style={{ color: "var(--coral)" }}>
@@ -77,7 +69,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </HeroSlideshow>
 
       {/* Stats bar */}
       <section style={{ backgroundColor: "var(--coral)" }} className="py-8">
@@ -92,48 +84,7 @@ export default function Home() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 px-4" style={{ backgroundColor: "var(--muted)" }}>
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <p className="uppercase text-xs tracking-widest mb-3 font-sans" style={{ color: "var(--coral)" }}>
-              Our Mission
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold font-sans mb-6" style={{ color: "var(--navy)" }}>
-              From promoting equality to serving humanity
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              BEEVIF is dedicated to empowering individuals and families by providing access to
-              quality education, promoting health and well-being, and ensuring food security. Our
-              holistic approach to community development has led to significant achievements across
-              rural Ghana.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              We believe that formal education is the most powerful tool for breaking the cycle of
-              poverty. Through schools, scholarships, medical outreach, and relief programmes, we
-              are transforming communities one family at a time.
-            </p>
-            <Link
-              href="/about"
-              style={{ color: "var(--coral)", borderColor: "var(--coral)" }}
-              className="inline-block border-2 px-6 py-3 rounded font-bold font-sans text-sm hover:opacity-80 transition-opacity"
-            >
-              LEARN MORE ABOUT US
-            </Link>
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-xl">
-            <div
-              role="img"
-              aria-label="BEEVIF community work"
-              className="w-full h-80"
-              style={{
-                backgroundImage: `url('${SECTION_IMG_1}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-          </div>
-        </div>
-      </section>
+      <MissionSection />
 
       {/* Three Pillars */}
       <section className="py-20 px-4">

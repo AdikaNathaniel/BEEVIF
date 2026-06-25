@@ -2,6 +2,7 @@ import Link from "next/link";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import MissionSection from "@/components/MissionSection";
 import SectionHeading from "@/components/SectionHeading";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 const SECTION_IMG_2 = "/images/Our-Work.jpg";
 
 const pillars = [
@@ -97,23 +98,19 @@ export default function Home() {
                 key={p.title}
                 className="rounded-2xl p-8 text-center shadow-md border border-gray-100 hover:shadow-lg transition-shadow overflow-hidden"
               >
-                {"img" in p ? (
+                <div
+                  className="h-44 overflow-hidden rounded-t-2xl"
+                  style={{ width: "calc(100% + 4rem)", marginLeft: "-2rem", marginTop: "-2rem", marginBottom: "1.25rem" }}
+                >
                   <div
-                    className="h-44 overflow-hidden rounded-t-2xl"
-                    style={{ width: "calc(100% + 4rem)", marginLeft: "-2rem", marginTop: "-2rem", marginBottom: "1.25rem" }}
-                  >
-                    <div
-                      className="w-full h-full"
-                      style={{
-                        backgroundImage: `url('${p.img}')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }}
-                    />
-                  </div>
-                ) : (
-                  <div className="text-5xl mb-5">{p.icon}</div>
-                )}
+                    className="w-full h-full"
+                    style={{
+                      backgroundImage: `url('${p.img}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                </div>
                 <h3 className="text-xl font-bold font-sans mb-3" style={{ color: "var(--navy)" }}>
                   {p.title}
                 </h3>
@@ -163,46 +160,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4" style={{ backgroundColor: "var(--muted)" }}>
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading label="Testimonials" heading="What People Are Saying" headingSize="text-3xl" className="mb-14" />
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                quote:
-                  "Before BEEVIF, I struggled to afford school fees and supplies. Now, I have access to quality education, and my dream of becoming a doctor feels possible.",
-                name: "Ama Oforiwaa",
-                role: "Sponsored Student",
-                photo: "/images/Ama-Oforiwaa-(Sponsored-Student).jpg",
-              },
-              {
-                quote:
-                  "BEEVIF's medical outreach programs have saved many lives in our village. Their dedication to providing healthcare and education is truly transforming our community.",
-                name: "Mr. Kwame Opong-Kwateng",
-                role: "Community Leader",
-                photo: "/images/Mr.Kwame-Oppong-Community-Leader.jpg",
-              },
-            ].map((t) => (
-              <div key={t.name} className="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
-                <p className="text-gray-600 italic leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={t.photo}
-                    alt={t.name}
-                    className="w-12 h-12 rounded-full object-cover shrink-0"
-                  />
-                  <div>
-                    <div className="font-bold font-sans text-sm" style={{ color: "var(--navy)" }}>
-                      {t.name}
-                    </div>
-                    <div className="text-xs text-gray-500">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsCarousel />
     </>
   );
 }

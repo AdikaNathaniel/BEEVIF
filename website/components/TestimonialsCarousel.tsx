@@ -20,9 +20,16 @@ const testimonials = [
   {
     quote:
       "We used to walk miles to school without proper books or meals. Thanks to BEEVIF, we now have school supplies, daily meals, and the support we need to focus on our education. We am forever grateful for this opportunity!",
-    name: "Sponsored Student",
-    role: "BEEVIF Beneficiary",
+    name: "Emmanuel Taiwiah & Daniel Safoh",
+    role: "Sponsored Students",
     photo: "/images/Sponsored-Student-Testimony.jpg",
+  },
+  {
+    quote:
+      "Sponsoring a child through BEEVIF has been one of the most fulfilling experiences of my life. Knowing that my contribution is directly changing a child's future fills my heart with joy.",
+    name: "Lisa Milly",
+    role: "Donor & Sponsor",
+    photo: "/images/Lily.jpeg",
   },
 ];
 

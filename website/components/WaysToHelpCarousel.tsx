@@ -1,5 +1,7 @@
 "use client";
 
+import SectionHeading from "@/components/SectionHeading";
+
 const ways = [
   {
     img: "/images/Sponsor-A-Child(Get-Involved-Page).jpg",
@@ -39,18 +41,16 @@ export default function WaysToHelpCarousel() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <p className="uppercase text-xs tracking-widest mb-3 font-sans" style={{ color: "var(--coral)" }}>
-            How You Can Help
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold font-sans" style={{ color: "var(--navy)" }}>
-            There Are Millions Who Need Your Help
-          </h2>
+        <SectionHeading
+          label="How You Can Help"
+          heading="There Are Millions Who Need Your Help"
+          className="mb-14"
+        >
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm leading-relaxed">
             There are millions of children around the world who lack basic necessities of life such as
             food, education, healthcare and shelter. You can make a difference.
           </p>
-        </div>
+        </SectionHeading>
 
         {/* Marquee viewport */}
         <div className="overflow-hidden" style={{ cursor: "default" }}>

@@ -1,17 +1,11 @@
+import SectionHeading from "@/components/SectionHeading";
+
 const contacts = [
   { icon: "📞", label: "Phone", lines: ["+233 50 337 7231", "+233 24 482 2288", "+233 50 554 8804"] },
   { icon: "✉️", label: "Email", lines: ["info@beevif.org"] },
   { icon: "📍", label: "Address", lines: ["P.O Box AN15698", "Accra-North, Ghana — West Africa"] },
 ];
 
-const socials = [
-  { label: "Facebook", icon: "f", href: "#" },
-  { label: "Instagram", icon: "ig", href: "#" },
-  { label: "YouTube", icon: "yt", href: "#" },
-  { label: "TikTok", icon: "tk", href: "#" },
-  { label: "LinkedIn", icon: "in", href: "#" },
-  { label: "Threads", icon: "th", href: "#" },
-];
 
 export default function Contact() {
   return (
@@ -64,14 +58,7 @@ export default function Contact() {
       {/* Message Form */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="uppercase text-xs tracking-widest mb-3 font-sans" style={{ color: "var(--coral)" }}>
-              Send a Message
-            </p>
-            <h2 className="text-3xl font-bold font-sans" style={{ color: "var(--navy)" }}>
-              Get in Touch
-            </h2>
-          </div>
+          <SectionHeading label="Send a Message" heading="Get in Touch" headingSize="text-3xl" className="mb-12" />
           <form
             action="https://formspree.io/f/YOUR_FORM_ID"
             method="POST"
@@ -144,28 +131,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Social */}
-      <section style={{ backgroundColor: "var(--navy)" }} className="py-16 px-4 text-white text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold font-sans mb-3">Follow Our Journey</h2>
-          <p className="text-white/70 text-sm mb-8">
-            Stay connected and see the impact we are making every day.
-          </p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                title={s.label}
-                style={{ backgroundColor: "var(--coral)" }}
-                className="w-12 h-12 rounded-full flex items-center justify-center text-white text-xs font-bold font-sans hover:opacity-80 transition-opacity"
-              >
-                {s.icon}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

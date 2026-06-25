@@ -1,21 +1,22 @@
 import Link from "next/link";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import MissionSection from "@/components/MissionSection";
+import SectionHeading from "@/components/SectionHeading";
 const SECTION_IMG_2 = "/images/Our-Work.jpg";
 
 const pillars = [
   {
-    icon: "📚",
+    img: "/images/education.jpg",
     title: "Education",
     desc: "Supporting schools, scholarships, and training programmes to give every child access to quality learning.",
   },
   {
-    icon: "🏥",
+    img: "/images/HealthCare.jpg",
     title: "Health",
     desc: "Running medical outreach campaigns and healthcare services to advance community well-being.",
   },
   {
-    icon: "🌾",
+    img: "/images/food-security.jpg",
     title: "Food Security",
     desc: "Distributing relief goods and implementing nutrition programmes to fight hunger across rural Ghana.",
   },
@@ -89,21 +90,30 @@ export default function Home() {
       {/* Three Pillars */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="uppercase text-xs tracking-widest mb-3 font-sans" style={{ color: "var(--coral)" }}>
-              What We Do
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold font-sans" style={{ color: "var(--navy)" }}>
-              Our Three Core Focus Areas
-            </h2>
-          </div>
+          <SectionHeading label="What We Do" heading="Our Three Core Focus Areas" className="mb-14" />
           <div className="grid md:grid-cols-3 gap-8">
             {pillars.map((p) => (
               <div
                 key={p.title}
-                className="rounded-2xl p-8 text-center shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                className="rounded-2xl p-8 text-center shadow-md border border-gray-100 hover:shadow-lg transition-shadow overflow-hidden"
               >
-                <div className="text-5xl mb-5">{p.icon}</div>
+                {"img" in p ? (
+                  <div
+                    className="h-44 overflow-hidden rounded-t-2xl"
+                    style={{ width: "calc(100% + 4rem)", marginLeft: "-2rem", marginTop: "-2rem", marginBottom: "1.25rem" }}
+                  >
+                    <div
+                      className="w-full h-full"
+                      style={{
+                        backgroundImage: `url('${p.img}')`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div className="text-5xl mb-5">{p.icon}</div>
+                )}
                 <h3 className="text-xl font-bold font-sans mb-3" style={{ color: "var(--navy)" }}>
                   {p.title}
                 </h3>
@@ -155,14 +165,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-20 px-4" style={{ backgroundColor: "var(--muted)" }}>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="uppercase text-xs tracking-widest mb-3 font-sans" style={{ color: "var(--coral)" }}>
-              Testimonials
-            </p>
-            <h2 className="text-3xl font-bold font-sans" style={{ color: "var(--navy)" }}>
-              What People Are Saying
-            </h2>
-          </div>
+          <SectionHeading label="Testimonials" heading="What People Are Saying" headingSize="text-3xl" className="mb-14" />
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {

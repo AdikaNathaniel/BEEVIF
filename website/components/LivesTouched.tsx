@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionHeading from "@/components/SectionHeading";
 
 const testimonials = [
   {
@@ -62,14 +63,7 @@ export default function LivesTouched() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <p className="uppercase text-xs tracking-widest mb-3 font-sans" style={{ color: "var(--coral)" }}>
-            Stories of Change
-          </p>
-          <h2 className="text-3xl font-bold font-sans" style={{ color: "var(--navy)" }}>
-            Lives We Have Touched
-          </h2>
-        </div>
+        <SectionHeading label="Stories of Change" heading="Lives We Have Touched" headingSize="text-3xl" className="mb-14" />
 
         <div className="grid sm:grid-cols-2 gap-6">
           {testimonials.map((t, i) => {

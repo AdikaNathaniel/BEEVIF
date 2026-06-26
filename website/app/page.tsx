@@ -85,6 +85,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Us */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeading label="Who We Are" heading="About Us" className="mb-10" />
+          <p className="text-gray-600 leading-relaxed text-center mb-12">
+            Baiden Etsiakoh Eagle Vision Foundation (BEEVIF) is a dedicated non-governmental
+            organization based in Accra, Ghana, committed to uplifting underprivileged communities
+            through initiatives in education, health, and food security. Co-founded by individuals
+            including Hannah Etsiakoh, who also serves as Vice President, BEEVIF operates with a
+            vision to create sustainable and positive change in society.
+          </p>
+
+          <div className="border-t border-gray-200 pt-12">
+            <SectionHeading label="What Drives Us" heading="Our Mission" headingSize="text-2xl md:text-3xl" className="mb-8" />
+            <p className="text-gray-600 leading-relaxed text-center">
+              At BEEVIF, our mission is to empower individuals and families by providing access to
+              quality education, promoting health and well-being, and ensuring food security. We
+              believe that by addressing these fundamental areas, we can foster self-reliant and
+              thriving communities.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Mission */}
       <MissionSection />
 

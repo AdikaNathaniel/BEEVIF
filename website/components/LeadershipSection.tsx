@@ -31,7 +31,7 @@ const leadership = [
   },
   {
     name: "Apostle Fred Hamilton",
-    role: "Partner & Advisor",
+    role: "USA Representative",
     img: "/images/Apostle-Fred-Hamilton.jpg",
     bio: "Apostle Fred Hamilton brings spiritual leadership and strategic guidance to BEEVIF, supporting the foundation's Christian values-driven approach to community transformation.",
   },

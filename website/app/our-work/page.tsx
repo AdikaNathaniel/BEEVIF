@@ -1,6 +1,7 @@
 import Link from "next/link";
 import WorkProgrammes from "@/components/WorkProgrammes";
 import SectionHeading from "@/components/SectionHeading";
+import CertificationsSection from "@/components/CertificationsSection";
 
 const HERO_BG = "/images/Our-Work.jpg";
 
@@ -47,6 +48,9 @@ export default function OurWork() {
       <section className="pb-20 px-4">
         <WorkProgrammes />
       </section>
+
+      {/* Certifications */}
+      <CertificationsSection />
 
       {/* CTA */}
       <section style={{ backgroundColor: "var(--coral)" }} className="py-16 px-4 text-white text-center">

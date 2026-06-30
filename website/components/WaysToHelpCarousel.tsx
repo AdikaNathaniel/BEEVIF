@@ -18,8 +18,7 @@ const ways = [
     href: "https://forms.google.com",
   },
   {
-    img: null,
-    icon: "❤️",
+    img: "/images/donate.jpg",
     title: "Donate",
     desc: "A one-time or recurring donation goes directly towards our programmes in education, health, and food security. Every amount makes a difference in the lives of families across rural Ghana.",
     cta: "DONATE NOW",

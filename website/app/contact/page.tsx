@@ -1,9 +1,9 @@
 import SectionHeading from "@/components/SectionHeading";
 
 const contacts = [
-  { icon: "📞", label: "Phone", lines: ["+233 50 337 7231", "+233 24 482 2288", "+233 50 554 8804"] },
-  { icon: "✉️", label: "Email", lines: ["info@beevif.org"] },
-  { icon: "📍", label: "Address", lines: ["P.O Box AN15698", "Accra-North, Ghana — West Africa"] },
+  { img: "/images/phone.jpg", label: "Phone", lines: ["+233 50 337 7231", "+233 24 482 2288", "+233 50 554 8804"] },
+  { img: "/images/email.jpg", label: "Email", lines: ["info@beevif.org"] },
+  { img: "/images/map.jpg",   label: "Address", lines: ["P.O Box AN15698", "Accra-North, Ghana"] },
 ];
 
 
@@ -35,7 +35,9 @@ export default function Contact() {
               key={c.label}
               className="bg-white rounded-2xl p-8 text-center shadow-md border border-gray-100"
             >
-              <div className="text-4xl mb-4">{c.icon}</div>
+              <div className="w-16 h-16 mx-auto mb-4">
+                <img src={c.img} alt={c.label} className="w-full h-full object-contain" />
+              </div>
               <h3 className="font-bold font-sans mb-3" style={{ color: "var(--navy)" }}>
                 {c.label}
               </h3>
@@ -75,7 +77,6 @@ export default function Contact() {
                   required
                   placeholder="Your name"
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 text-sm"
-                  style={{ "--tw-ring-color": "var(--coral)" } as React.CSSProperties}
                 />
               </div>
               <div>

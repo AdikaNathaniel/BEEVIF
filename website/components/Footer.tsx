@@ -45,7 +45,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-white/70 hover:text-white text-sm transition-colors">
+                  <Link
+                    href={l.href}
+                    className="text-white/70 hover:text-white text-sm inline-block hover:font-bold hover:underline underline-offset-4 hover:translate-x-2 transition-all duration-200"
+                  >
                     {l.label}
                   </Link>
                 </li>
@@ -59,16 +62,31 @@ export default function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-3 text-sm text-white/70">
-              <li className="flex gap-2">
-                <span>📍</span>
-                <span>P.O Box AN15698 Accra-North, Ghana — West Africa</span>
+              {/* Address */}
+              <li className="flex items-start gap-3">
+                <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mt-0.5 bg-white flex items-center justify-center">
+                  <img src="/images/map.jpg" alt="Address" className="w-full h-full object-contain" />
+                </div>
+                <span>P.O Box AN15698 Accra-North, Ghana</span>
               </li>
-              <li>📞 +233 50 337 7231</li>
-              <li>📞 +233 24 482 2288</li>
-              <li>📞 +233 50 554 8804</li>
-              <li>
+              {/* Phone — one icon, numbers stacked beneath */}
+              <li className="flex items-start gap-3">
+                <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mt-0.5 bg-white flex items-center justify-center">
+                  <img src="/images/phone.jpg" alt="Phone" className="w-full h-full object-contain" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span>+233 50 337 7231</span>
+                  <span>+233 24 482 2288</span>
+                  <span>+233 50 554 8804</span>
+                </div>
+              </li>
+              {/* Email */}
+              <li className="flex items-center gap-3">
+                <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 bg-white flex items-center justify-center">
+                  <img src="/images/email.jpg" alt="Email" className="w-full h-full object-contain" />
+                </div>
                 <a href="mailto:info@beevif.org" className="hover:text-white transition-colors">
-                  ✉ info@beevif.org
+                  info@beevif.org
                 </a>
               </li>
             </ul>
@@ -81,11 +99,11 @@ export default function Footer() {
             </h4>
             <div className="flex flex-wrap gap-3">
               {[
-                { label: "Facebook", icon: <FaFacebookF size={16} />, href: "#", bg: "#1877F2" },
-                { label: "Instagram", icon: <FaInstagram size={16} />, href: "#", bg: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" },
-                { label: "YouTube", icon: <FaYoutube size={16} />, href: "#", bg: "#FF0000" },
+                { label: "Facebook", icon: <FaFacebookF size={16} />, href: "https://www.facebook.com/share/185UKmthf5/", bg: "#1877F2" },
+                { label: "Instagram", icon: <FaInstagram size={16} />, href: "https://www.instagram.com/beevif_official?igsh=MWpsY296MXgwZXE3aQ==", bg: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" },
+                { label: "YouTube", icon: <FaYoutube size={16} />, href: "https://youtube.com/@beevifofficial?si=J_UQjy1T-gCWvCFW", bg: "#FF0000" },
                 { label: "TikTok", icon: <FaTiktok size={16} />, href: "#", bg: "#010101" },
-                { label: "LinkedIn", icon: <FaLinkedinIn size={16} />, href: "#", bg: "#0A66C2" },
+                { label: "LinkedIn", icon: <FaLinkedinIn size={16} />, href: "https://gh.linkedin.com/company/baiden-etsiakoh-eagle-vision-foundation", bg: "#0A66C2" },
               ].map((s) => (
                 <a
                   key={s.label}

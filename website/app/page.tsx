@@ -3,6 +3,7 @@ import HeroSlideshow from "@/components/HeroSlideshow";
 import MissionSection from "@/components/MissionSection";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import StatsBar from "@/components/StatsBar";
 const SECTION_IMG_2 = "/images/Our-Work.jpg";
 
 const pillars = [
@@ -23,12 +24,6 @@ const pillars = [
   },
 ];
 
-const stats = [
-  { value: "600+", label: "People clothed" },
-  { value: "5", label: "Washrooms built" },
-  { value: "10+", label: "Years of service" },
-  { value: "1000s", label: "Lives impacted" },
-];
 
 export default function Home() {
   return (
@@ -74,16 +69,7 @@ export default function Home() {
       </HeroSlideshow>
 
       {/* Stats bar */}
-      <section style={{ backgroundColor: "var(--coral)" }} className="py-8">
-        <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="text-3xl font-bold font-sans">{s.value}</div>
-              <div className="text-sm mt-1 opacity-90 font-sans">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsBar />
 
       {/* About Us */}
       <section className="py-20 px-4">

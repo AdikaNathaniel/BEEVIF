@@ -43,18 +43,6 @@ export default function VolunteerSection() {
             welcome educators, healthcare workers, builders, organisers, and anyone with a heart to
             serve.
           </p>
-          <div className="space-y-3 text-sm text-gray-600 mb-8">
-            <div className="flex gap-3 items-start">
-              <span style={{ color: "var(--coral)" }}>✉</span>
-              <a href="mailto:specialgrace.academy.edu@gmail.com" className="hover:underline">
-                specialgrace.academy.edu@gmail.com
-              </a>
-            </div>
-            <div className="flex gap-3 items-start">
-              <span style={{ color: "var(--coral)" }}>📞</span>
-              <span>+233 30242 3348</span>
-            </div>
-          </div>
           <a
             href="https://forms.google.com"
             target="_blank"

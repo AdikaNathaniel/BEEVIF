@@ -1,5 +1,4 @@
 import VolunteerSection from "@/components/VolunteerSection";
-import LivesTouched from "@/components/LivesTouched";
 import WaysToHelpCarousel from "@/components/WaysToHelpCarousel";
 
 const HERO_BG = "/images/Get-Involved-Background.jpeg";
@@ -38,8 +37,6 @@ export default function GetInvolved() {
       {/* Volunteer CTA */}
       <VolunteerSection />
 
-      {/* Lives Touched */}
-      <LivesTouched />
     </>
   );
 }

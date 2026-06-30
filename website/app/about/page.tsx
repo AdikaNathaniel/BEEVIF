@@ -1,15 +1,10 @@
 import Link from "next/link";
 import LeadershipSection from "@/components/LeadershipSection";
+import ValuesSection from "@/components/ValuesSection";
+import PartnersSection from "@/components/PartnersSection";
 import SectionHeading from "@/components/SectionHeading";
 
 const HERO_BG = "https://picsum.photos/seed/beevif-about/1280/720";
-
-const values = [
-  { icon: "🤝", title: "Compassion", desc: "We serve with empathy and deep care for every individual." },
-  { icon: "💡", title: "Empowerment", desc: "We equip communities with tools to create their own futures." },
-  { icon: "✝️", title: "Faith", desc: "Our work is grounded in Christ-like values of love and service." },
-  { icon: "🌍", title: "Integrity", desc: "We operate with transparency and accountability to our communities." },
-];
 
 export default function About() {
   return (
@@ -64,41 +59,91 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-16 px-4" style={{ backgroundColor: "var(--muted)" }}>
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading label="What Guides Us" heading="Our Core Values" headingSize="text-3xl" className="mb-12" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
-                <div className="text-4xl mb-4">{v.icon}</div>
-                <h3 className="font-bold font-sans mb-2" style={{ color: "var(--navy)" }}>
-                  {v.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ValuesSection />
 
       {/* Leadership */}
       <LeadershipSection />
 
-      {/* CTA */}
-      <section style={{ backgroundColor: "var(--navy)" }} className="py-16 px-4 text-white text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold font-sans mb-4">Partner With Us</h2>
-          <p className="text-white/80 leading-relaxed mb-8">
-            BEEVIF actively seeks sponsors, donors, and partners to expand its reach and deepen its
-            impact within underprivileged communities across Ghana.
+      {/* Partners */}
+      <PartnersSection />
+
+      {/* Partner With Us */}
+      <section style={{ backgroundColor: "var(--navy)" }} className="py-20 px-4 text-white">
+        <div className="max-w-4xl mx-auto">
+          <p className="uppercase text-xs tracking-widest mb-3 font-sans text-center" style={{ color: "var(--coral)" }}>
+            Partner with Us
           </p>
-          <Link
-            href="/get-involved"
-            style={{ backgroundColor: "var(--coral)" }}
-            className="inline-block px-8 py-4 rounded font-bold font-sans text-sm tracking-wide hover:opacity-90 transition-opacity"
-          >
-            GET INVOLVED
-          </Link>
+          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-6 text-center">
+            Support the Vision — Partner with BEEVIF
+          </h2>
+          <p className="text-white/80 leading-relaxed text-center mb-12 max-w-2xl mx-auto">
+            Join Baiden Etsiakoh Eagle Vision Foundation (BEEVIF) in transforming lives across rural
+            Ghana. Through medical outreach, relief aid, and education, we are breaking cycles of
+            poverty and empowering communities. Your sponsorship or partnership can help us reach more
+            people with hope, healing, and opportunity.
+          </p>
+
+          <h3 className="text-xl font-bold font-sans mb-8 text-center" style={{ color: "var(--coral)" }}>
+            Bank Details for Support
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Cedi Account */}
+            <div className="rounded-2xl p-8 border border-white/20" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
+              <p className="uppercase text-xs tracking-widest mb-5 font-sans font-bold" style={{ color: "var(--coral)" }}>
+                Cedi (GH¢) Account
+              </p>
+              <div className="space-y-4 text-sm">
+                <div>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Bank Name</p>
+                  <p className="font-semibold font-sans text-white">Fidelity Bank</p>
+                </div>
+                <div>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Branch Name</p>
+                  <p className="font-semibold font-sans text-white">Ridge Towers</p>
+                </div>
+                <div>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Account Number</p>
+                  <p className="font-bold font-sans text-lg tracking-widest" style={{ color: "var(--coral)" }}>
+                    1060000278154
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Dollar Account */}
+            <div className="rounded-2xl p-8 border border-white/20" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
+              <p className="uppercase text-xs tracking-widest mb-5 font-sans font-bold" style={{ color: "var(--coral)" }}>
+                Dollar Account
+              </p>
+              <div className="space-y-4 text-sm">
+                <div>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Bank Name</p>
+                  <p className="font-semibold font-sans text-white">Fidelity Bank</p>
+                </div>
+                <div>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Branch Name</p>
+                  <p className="font-semibold font-sans text-white">Ridge Towers</p>
+                </div>
+                <div>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Account Number</p>
+                  <p className="font-bold font-sans text-lg tracking-widest" style={{ color: "var(--coral)" }}>
+                    1961000278116
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/get-involved"
+              style={{ backgroundColor: "var(--coral)" }}
+              className="inline-block px-8 py-4 rounded font-bold font-sans text-sm tracking-wide hover:opacity-90 transition-opacity"
+            >
+              GET INVOLVED
+            </Link>
+          </div>
         </div>
       </section>
     </>
